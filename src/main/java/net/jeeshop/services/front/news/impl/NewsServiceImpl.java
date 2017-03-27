@@ -23,7 +23,7 @@ import javax.annotation.Resource;
 @Service
 public class NewsServiceImpl extends ServersManager<News, NewsDao> implements
 		NewsService {
-    @Autowired
+	@Resource(name = "newsDaoFront")
     @Override
     public void setDao(NewsDao newsDao) {
         this.dao = newsDao;
